@@ -1,0 +1,37 @@
+{
+  "name": "release-front-page",
+  "version": "1.0.0",
+  "description": "Create evidence-backed release notes and self-contained release visuals from Git refs.",
+  "author": {
+    "name": "gezi71",
+    "url": "https://github.com/gezi71"
+  },
+  "homepage": "https://github.com/gezi71/release-front-page#readme",
+  "repository": "https://github.com/gezi71/release-front-page",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "release-notes",
+    "changelog",
+    "git",
+    "svg"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Release Front Page",
+    "shortDescription": "Evidence-backed release notes and visual front pages",
+    "longDescription": "Turn a local Git ref range into traceable release notes, printable HTML and SVG front pages, and a localized social card without publishing anything.",
+    "developerName": "gezi71",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/gezi71/release-front-page",
+    "defaultPrompt": [
+      "Use $release-front-page to draft release notes from two Git refs.",
+      "Use $release-front-page to create a bilingual release front page.",
+      "Use $release-front-page to verify breaking changes before a release."
+    ]
+  }
+}

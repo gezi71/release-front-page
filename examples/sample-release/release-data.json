@@ -1,0 +1,216 @@
+{
+  "category_order": [
+    "Highlights",
+    "Features",
+    "Fixes",
+    "Performance",
+    "Developer Experience",
+    "Documentation",
+    "Breaking Changes",
+    "Migration",
+    "Other"
+  ],
+  "commits": [
+    {
+      "body": "",
+      "breaking": false,
+      "category": "Features",
+      "confidence": "high",
+      "files": [
+        {
+          "additions": 5,
+          "binary": false,
+          "deletions": 1,
+          "path": "src/cli.py"
+        },
+        {
+          "additions": 17,
+          "binary": false,
+          "deletions": 0,
+          "path": "tests/test_cli.py"
+        }
+      ],
+      "highlight": true,
+      "merge": false,
+      "migration_note": null,
+      "parents": [
+        "9fec43ee743a998bddd4a6bf3b318a94d09d291a"
+      ],
+      "provenance": {
+        "commit": "6e1dedb5e79576183bac4761cc5de44589fb4f6f",
+        "pull_request": null
+      },
+      "revert": false,
+      "scope": "cli",
+      "sha": "6e1dedb5e79576183bac4761cc5de44589fb4f6f",
+      "short_sha": "6e1dedb",
+      "stats": {
+        "additions": 22,
+        "binary_files": 0,
+        "deletions": 1,
+        "files_changed": 2
+      },
+      "subject": "feat(cli): accept configuration from stdin",
+      "summaries": {
+        "en": "The CLI now accepts configuration from stdin.",
+        "zh-CN": "CLI 现在可以从标准输入读取配置。"
+      },
+      "type": "feat"
+    },
+    {
+      "body": "",
+      "breaking": false,
+      "category": "Fixes",
+      "confidence": "high",
+      "files": [
+        {
+          "additions": 7,
+          "binary": false,
+          "deletions": 0,
+          "path": "src/parser.py"
+        },
+        {
+          "additions": 11,
+          "binary": false,
+          "deletions": 0,
+          "path": "tests/test_parser.py"
+        }
+      ],
+      "highlight": false,
+      "merge": false,
+      "migration_note": null,
+      "parents": [
+        "6e1dedb5e79576183bac4761cc5de44589fb4f6f"
+      ],
+      "provenance": {
+        "commit": "b3cd40b5e15df6d7ad164fc7907bda5d3847253e",
+        "pull_request": null
+      },
+      "revert": false,
+      "scope": null,
+      "sha": "b3cd40b5e15df6d7ad164fc7907bda5d3847253e",
+      "short_sha": "b3cd40b",
+      "stats": {
+        "additions": 18,
+        "binary_files": 0,
+        "deletions": 0,
+        "files_changed": 2
+      },
+      "subject": "fix: preserve <edge> values in YAML",
+      "summaries": {
+        "en": "YAML parsing now preserves <edge> values.",
+        "zh-CN": "YAML 解析现在会保留 <edge> 值。"
+      },
+      "type": "fix"
+    },
+    {
+      "body": "BREAKING CHANGE: replace --legacy with --profile default",
+      "breaking": true,
+      "category": "Breaking Changes",
+      "confidence": "high",
+      "files": [
+        {
+          "additions": 1,
+          "binary": false,
+          "deletions": 0,
+          "path": "docs/migration.md"
+        },
+        {
+          "additions": 9,
+          "binary": false,
+          "deletions": 0,
+          "path": "src/options.py"
+        },
+        {
+          "additions": 15,
+          "binary": false,
+          "deletions": 0,
+          "path": "tests/test_options.py"
+        }
+      ],
+      "highlight": true,
+      "merge": false,
+      "migration_note": "replace --legacy with --profile default",
+      "parents": [
+        "b3cd40b5e15df6d7ad164fc7907bda5d3847253e"
+      ],
+      "provenance": {
+        "commit": "c0f3022be80be1514dae06f50acb23f05a0bfa97",
+        "pull_request": null
+      },
+      "revert": false,
+      "scope": "cli",
+      "sha": "c0f3022be80be1514dae06f50acb23f05a0bfa97",
+      "short_sha": "c0f3022",
+      "stats": {
+        "additions": 25,
+        "binary_files": 0,
+        "deletions": 0,
+        "files_changed": 3
+      },
+      "subject": "feat(cli)!: replace the legacy option",
+      "summaries": {
+        "en": "Named profiles replace the legacy CLI option.",
+        "zh-CN": "命名配置档取代了旧版 CLI 选项。"
+      },
+      "type": "feat"
+    }
+  ],
+  "contributors": [],
+  "editorial": {
+    "en": {
+      "dek": "Configuration can now arrive by pipe, while named profiles make the old CLI contract explicit.",
+      "headline": "Pipes in. Legacy flags out."
+    },
+    "zh-CN": {
+      "dek": "配置现在可以通过管道输入，命名配置档也让旧版 CLI 契约正式退场。",
+      "headline": "管道进场，旧参数退场"
+    }
+  },
+  "github_enrichment": {
+    "attempted": 0,
+    "failure_reason": null,
+    "failures": [],
+    "requested": false,
+    "succeeded": 0
+  },
+  "limitations": [
+    "Sample claims trace to the bundled fixture's commits, code, tests, and migration document.",
+    "The fixture builder runs the bundled tests; the release collector never executes target-project code.",
+    "The release still requires maintainer approval before publication."
+  ],
+  "range": {
+    "from": "v1.4.0",
+    "from_sha": "9fec43ee743a998bddd4a6bf3b318a94d09d291a",
+    "include_merges": false,
+    "to": "v2.0.0",
+    "to_sha": "c0f3022be80be1514dae06f50acb23f05a0bfa97"
+  },
+  "repository": {
+    "name": "sample-cli",
+    "remote_slug": null
+  },
+  "schema_version": "1.0",
+  "summary": {
+    "additions": 65,
+    "breaking_count": 1,
+    "categories": {
+      "Breaking Changes": 1,
+      "Developer Experience": 0,
+      "Documentation": 0,
+      "Features": 1,
+      "Fixes": 1,
+      "Highlights": 0,
+      "Migration": 0,
+      "Other": 0,
+      "Performance": 0
+    },
+    "change_basis": "net_ref_diff",
+    "commit_count": 3,
+    "deletions": 1,
+    "files_changed": 7,
+    "merge_count": 0,
+    "revert_count": 0
+  },
+  "version": "v2.0.0"
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipes in. Legacy flags out.</title>
+<style>
+:root{--paper:#f4eddf;--ink:#171511;--muted:#6d675d;--accent:#a32921;--panel:#e7ddcb}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+main{width:min(1120px,92vw);margin:0 auto;padding:38px 0 72px}header{text-align:center;border-block:5px double var(--ink);padding:22px 4vw;margin-bottom:26px}
+.kicker{font:700 12px/1.2 ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}h1{font-size:clamp(42px,8vw,94px);line-height:.88;margin:18px 0;letter-spacing:-.055em}.dek{font-size:clamp(18px,2.5vw,28px);color:var(--muted);max-width:760px;margin:auto}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);border:1px solid var(--ink);margin:26px 0}.fact{background:var(--panel);padding:18px;text-align:center}.fact strong{display:block;font-size:34px}.fact span{font:700 11px/1.2 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.1em}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 34px}section{min-width:0;border-top:3px solid var(--ink);margin-bottom:30px}h2{font-size:25px;text-transform:uppercase;letter-spacing:.04em;margin:8px 0}ul{list-style:none;padding:0;margin:0}li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;padding:12px 0;border-top:1px solid color-mix(in srgb,var(--ink) 22%,transparent);line-height:1.35}code{color:var(--muted);white-space:nowrap}.breaking{display:inline-block;font:700 10px/1 ui-monospace,monospace;color:var(--paper);background:var(--accent);padding:4px 6px;margin-left:8px}footer{border-top:5px double var(--ink);margin-top:30px;padding-top:18px;color:var(--muted)}
+@media(max-width:650px){.facts,.grid{grid-template-columns:1fr}li{grid-template-columns:1fr}}@media print{main{width:100%;padding:0}}
+</style>
+</head>
+<body><main>
+<header><div class="kicker">sample-cli · v2.0.0</div><h1>Pipes in. Legacy flags out.</h1><p class="dek">Configuration can now arrive by pipe, while named profiles make the old CLI contract explicit.</p></header>
+<div class="facts"><div class="fact"><strong>3</strong><span>commits</span></div><div class="fact"><strong>7</strong><span>files changed</span></div><div class="fact"><strong>+65 / -1</strong><span>lines changed</span></div></div>
+<div class="grid"><section><h2>Features</h2><ul><li><span>The CLI now accepts configuration from stdin.</span><code>6e1dedb</code></li></ul></section><section><h2>Fixes</h2><ul><li><span>YAML parsing now preserves &lt;edge&gt; values.</span><code>b3cd40b</code></li></ul></section><section><h2>Breaking Changes</h2><ul><li><span>Named profiles replace the legacy CLI option.<span class="breaking">BREAKING</span></span><code>c0f3022</code></li></ul></section></div>
+<footer>Page shows 3 of 3 commits; Markdown and JSON retain every change.<br>Draft: verify user impact and migration advice before publishing.</footer>
+</main></body></html>

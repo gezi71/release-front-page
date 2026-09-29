@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Front Page"
+  short_description: "Turn Git history into release stories and share cards"
+  default_prompt: "Use $release-front-page to turn this Git ref range into evidence-backed release notes and shareable visuals."

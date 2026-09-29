@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible problem using public or synthetic data.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include private source, tokens, author emails, or undisclosed vulnerabilities. Use Private Vulnerability Reporting for security issues."
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Include the exact command, exit code, and sanitized output.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide a public repository or synthetic Git history.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, Git version"
+    validations:
+      required: true
