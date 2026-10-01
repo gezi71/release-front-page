@@ -203,7 +203,7 @@ class CollectorIntegrationTests(unittest.TestCase):
 
         without, output_without = self.run_collector(output=self.root / "without.json")
         self.assertEqual(without.returncode, 0, without.stderr)
-        self.assertEqual(json.loads(output_without.read_text())["contributors"], [])
+        self.assertEqual(json.loads(output_without.read_text(encoding="utf-8"))["contributors"], [])
 
     def test_commit_trailers_and_email_shaped_text_are_redacted(self):
         self.repo.commit(
@@ -270,7 +270,7 @@ class CollectorIntegrationTests(unittest.TestCase):
             text=True,
         )
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(json.loads(output.read_text())["commits"], [])
+        self.assertEqual(json.loads(output.read_text(encoding="utf-8"))["commits"], [])
 
     def test_invalid_ref_and_non_git_directory_fail_cleanly(self):
         bad_ref, _ = self.run_collector("--to", "missing-ref")
@@ -328,8 +328,8 @@ class CollectorIntegrationTests(unittest.TestCase):
         )
         self.assertEqual(one.returncode, 0, one.stderr)
         self.assertEqual(two.returncode, 0, two.stderr)
-        self.assertEqual(json.loads(without.read_text())["summary"]["merge_count"], 0)
-        self.assertEqual(json.loads(with_merges.read_text())["summary"]["merge_count"], 1)
+        self.assertEqual(json.loads(without.read_text(encoding="utf-8"))["summary"]["merge_count"], 0)
+        self.assertEqual(json.loads(with_merges.read_text(encoding="utf-8"))["summary"]["merge_count"], 1)
 
     def test_real_revert_is_preserved_as_other(self):
         reverted_sha = self.repo.commit("feat: temporary switch", "src/switch.py", "ENABLED = True\n")
@@ -355,7 +355,7 @@ class CollectorIntegrationTests(unittest.TestCase):
             text=True,
         )
         self.assertEqual(result.returncode, 0, result.stderr)
-        data = json.loads(output.read_text())
+        data = json.loads(output.read_text(encoding="utf-8"))
         self.assertEqual(data["summary"]["revert_count"], 1)
         self.assertEqual(data["commits"][-1]["category"], "Other")
 

@@ -1,0 +1,2 @@
+# Keep reproducible text artifacts identical across Windows and Unix checkouts.
+* text=auto eol=lf
